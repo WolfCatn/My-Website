@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Math Loop</title>
+</head>
+<body>
+    <h1>Math Loop</h1>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button id="addButton">Add</button>
+    <p>Total: <span id="totalDisplay">0</span></p>
+
+    <script>
+        let total = 0;
+        const inputField = document.getElementById('numberInput');
+        const addButton = document.getElementById('addButton');
+        const totalDisplay = document.getElementById('totalDisplay');
+        addButton.addEventListener('click', function() {
+            const number = Number(inputField.value);
+            if (number === -1) {
+            total = 0;
+            totalDisplay.textContent = total; 
+        } else {
+            total += number;
+            totalDisplay.textContent = total;
+        }
+            inputField.value = '';
+        });
+    </script>
+</body>
